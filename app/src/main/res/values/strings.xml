@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NewYorkTimes</string>
+    <string name="search_hint">Search Query</string>
+    <string name="Search">Search</string>
+    <string name="network_error_msg">Please check network connectivity and try again</string>
+    <string name="facebook_app_id">1725530231002146</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cb_arts">Arts</string>
+    <string name="cb_sports">Sports</string>
+    <string name="cb_fashion">Fashion &amp; Style</string>
+    <string name="tv_begin_date">Begin Date: </string>
+    <string name="tv_sort">Sort: </string>
+    <string name="tv_news">News Desk: </string>
+    <string name="save_btn">Save</string>
+    <string name="cancel_btn">Cancel</string>
+</resources>

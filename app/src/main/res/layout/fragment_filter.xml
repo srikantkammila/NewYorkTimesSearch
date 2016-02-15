@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_filter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:text="@string/tv_begin_date"
+        android:textSize="15sp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="end"
+        android:padding="10dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvDate"
+        android:inputType="datetime"
+        android:id="@+id/etBeginDate"
+        android:layout_toRightOf="@id/tvDate"
+        android:onClick="showDatepicker"
+        android:clickable="true"
+        android:textSize="15sp"
+        android:editable="false"
+        android:hint="YYYY/MM/DD"
+        android:drawableRight="@drawable/date_range_black"
+        android:background="@drawable/edit_border"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/tvSort"
+        android:text="@string/tv_sort"
+        android:textSize="15sp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvDate"
+        android:gravity="end"
+        android:padding="10dp"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/etBeginDate"
+        android:layout_toRightOf="@id/tvSort"
+        android:id="@+id/rgSort"
+        android:padding="10dp">
+        <RadioButton android:id="@+id/radio_latest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_oldest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oldest"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvNewsDesk"
+        android:text="@string/tv_news"
+        android:textSize="15sp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvSort"
+        android:gravity="end"
+        android:padding="10dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/tvNewsDesk"
+        android:layout_below="@id/rgSort"
+        android:padding="10dp"
+        android:id="@+id/llNews">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbArts"
+            android:text="@string/cb_arts"
+            android:onClick="onNewsDeskChange"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbFashin"
+            android:text="@string/cb_fashion"
+            android:onClick="onNewsDeskChange"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbSports"
+            android:text="@string/cb_sports"
+            android:onClick="onNewsDeskChange"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_btn"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/llNews"
+        android:padding="10dp"
+        android:text="@string/save_btn"
+        android:onClick="onSaveClicked"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llNews"
+        android:layout_toLeftOf="@id/save_btn"
+        android:padding="10dp"
+        android:text="@string/cancel_btn"
+        android:onClick="onCancelClicked"/>
+
+
+
+
+</RelativeLayout>
